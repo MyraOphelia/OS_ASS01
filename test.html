@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group_03</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Group_03</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Input Process Details</h2>
+            <form id="processForm">
+                <label for="numProcesses">Number of Processes (3-10):</label>
+                <input type="number" id="numProcesses" name="numProcesses" min="3" max="10" required>
+                <button type="button" onclick="generateProcessFields()">Generate Fields</button>
+
+                <div id="processFields"></div>
+
+                <label for="quantum">Time Quantum (For Round Robin):</label>
+                <input type="number" id="quantum" name="quantum">
+
+                <label for="algorithm">Choose Scheduling Algorithm:</label>
+                <select id="algorithm" name="algorithm">
+                    <option value="roundRobin">Round Robin</option>
+                    <option value="srt">SRT</option>
+                    <option value="sjn">SJN</option>
+                    <option value="preemptivePriority">Preemptive Priority</option>
+                    <option value="nonPreemptivePriority">Non-Preemptive Priority</option>
+                </select>
+
+                <button type="submit">Simulate</button>
+            </form>
+        </div>
+
+        <div class="results-container">
+            <h2>Simulation Results</h2>
+            <div id="ganttChart" class="gantt"></div>
+            <div id="ganttChartTable"></div>
+            <div id="resultsTable"></div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>Myra. Kah Yong. Yi Thung and Belinda</p>
+    </footer>
