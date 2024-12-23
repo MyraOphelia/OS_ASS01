@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group_03</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="styles01.css">
+    <script src="javascript01.js" defer></script>
+    
 </head>
+
 <body>
     <header>
-        <h1>Group_03</h1>
+        <h1>CPU Scheduling</h1>
     </header>
 
     <div class="container">
-        <div class="form-container">
-            <h2>Input Process Details</h2>
-            <form id="processForm">
-                <label for="numProcesses">Number of Processes (3-10):</label>
-                <input type="number" id="numProcesses" name="numProcesses" min="3" max="10" required>
-                <button type="button" onclick="generateProcessFields()">Generate Fields</button>
+        <h2>Process Details</h2>
 
-                <div id="processFields"></div>
+        <label for="algorithm">Select Scheduling Algorithm:</label>
+        <select id="algorithm" onchange="toggleQuantumInput()">
+            <option value="roundRobin">Round Robin</option>
+            <option value="srt">Shortest Remaining Time (SRT)</option>
+            <option value="sjn">Shortest Job Next (SJN)</option>
+            <option value="priority">Non-Preemptive Priority</option>
+        </select>
 
-                <label for="quantum">Time Quantum (For Round Robin):</label>
-                <input type="number" id="quantum" name="quantum">
+        <label for="quantum">Time Quantum:</label>
+        <input type="number" id="quantum" value="3" min="1">
 
-                <label for="algorithm">Choose Scheduling Algorithm:</label>
-                <select id="algorithm" name="algorithm">
-                    <option value="roundRobin">Round Robin</option>
-                    <option value="srt">SRT</option>
-                    <option value="sjn">SJN</option>
-                    <option value="preemptivePriority">Preemptive Priority</option>
-                    <option value="nonPreemptivePriority">Non-Preemptive Priority</option>
-                </select>
+        <table>
+            <thead>
+                <tr>
+                    <th>Process ID</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="processTable">
+                <!-- Process rows will be added dynamically -->
+            </tbody>
+        </table>
+        <button onclick="addProcess()">Add Process</button>
+        <button onclick="runScheduling()">Run Scheduling</button>
 
-                <button type="submit">Simulate</button>
-            </form>
-        </div>
+        <h2>Gantt Chart</h2>
+        <div class="gantt" id="ganttChart"></div>
 
-        <div class="results-container">
-            <h2>Simulation Results</h2>
-            <div id="ganttChart" class="gantt"></div>
-            <div id="ganttChartTable"></div>
-            <div id="resultsTable"></div>
-        </div>
-        
+        <h2>Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Process ID</th>
+                    <th>Completion Time</th>
+                    <th>Turnaround Time</th>
+                    <th>Waiting Time</th>
+                </tr>
+            </thead>
+            <tbody id="resultsTable">
+                <!-- Results will be added dynamically -->
+            </tbody>
+        </table>
+        <p id="averages"></p>
     </div>
 
     <footer>
-        <p>Myra. Kah Yong. Yi Thung and Belinda</p>
+        <p>© MYRA | KAH YONG | YI THUNG | BELINDA</p>
     </footer>
+
+</body>
+
+</html>

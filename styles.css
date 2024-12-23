@@ -1,109 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
 
+.container {
+    max-width: 800px;
+    margin: auto;
+}
 
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
-        }
+table,
+th,
+td {
+    border: 1px solid black;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
 
-        .form-container, .results-container {
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
+.gantt {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    gap: 5px;
+}
 
-        h1, h2 {
-            font-weight: normal;
-            color: #333;
-        }
+.gantt div {
+    padding: 10px;
+    background: #ddd;
+    border: 1px solid #aaa;
+    text-align: center;
+}
 
-        form label {
-            display: block;
-            margin: 10px 0 5px;
-            color: #555;
-        }
+header {
+    background-color: #C9CC3F;
+    color: white;
+    up: 0%;
+    text-align: center;
+}
 
-        form input, form select, button {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
+.form-container,
+.results-container {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
 
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+form input,
+form select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+button {
+    background-color: #C9CC3F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        table, th, td {
-            border: 1px solid #ddd;
-        }
+button:hover {
+    background-color: #C9CC3F;
+}
 
-        th, td {
-            padding: 12px;
-            text-align: center;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
-        th {
-            background-color: #f2f2f2;
-        }
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
 
-        .gantt {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
 
-        .gantt .block {
-            border: 1px solid #4CAF50;
-            background-color: #dfffd6;
-            padding: 10px;
-            margin: 5px;
-            flex: 1 1 auto;
-            text-align: center;
-            border-radius: 4px;
-        }
+th {
+    background-color: #f2f2f2;
+}
 
-        footer {
-            text-align: center;
-           
-            background-color: #4CAF50;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
- 
+footer {
+    text-align: center;
+    background-color: #C9CC3F;
+
+    color: white;
+    position: fixed;
+    /* bottom: 0; */
+    width: 95%;
+}
